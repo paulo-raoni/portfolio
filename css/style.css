@@ -24,7 +24,7 @@ body {
     font-size: 1.2em;
     height: 40px;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .list-item {
@@ -55,6 +55,7 @@ div .list-item:hover {
 .sectionBox {
     position: relative;
     margin: 0 auto;
+    padding-bottom: 150px;
     height: 600px;
     color: white;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -84,6 +85,7 @@ div#aboutBox {
     background-image: url('https://media.licdn.com/media/AAEAAQAAAAAAAAntAAAAJDY2YmU0MmI4LThhNzYtNDU4Ny1iOTExLWI3YzRjNGQwZTVkNw.jpg');
     background-position: center;
     background-attachment: fixed;
+    z-index: 1;
 }
 
 p.about-paragraph {
@@ -114,7 +116,7 @@ p.about-paragraph-2 {
     text-shadow: -.8px .8px 2px white;
     letter-spacing: 0.2em;
     border-radius: 20%;
-    width: 70%;
+    width: 50%;
     transition: all 1s;
 }
 
@@ -183,7 +185,7 @@ p.about-paragraph-3:hover {
     margin: 10px;
     box-shadow: -1px -1px 2px white, 1px 1px 2px white, -6px 6px 8px black, 6px -6px 8px black;
     border-radius: 3%;
-    z-index: 1;
+    z-index: 2;
     transition: 1s all;
 }
 
@@ -201,7 +203,7 @@ p.about-paragraph-3:hover {
     font-family: Impact;
     text-align: center;
     background-color: black;
-    height: 200px;
+    height: 250px;
     color: white;
     bottom: 0px;
 }
@@ -312,7 +314,7 @@ p.about-paragraph-3:hover {
     }
 }
 
-@media only screen and (max-width: 511px) {
+@media only screen and (max-width: 480px) {
     p.about-paragraph {
         line-height: 1.4em;
         font-size: 0.7em;
@@ -322,19 +324,6 @@ p.about-paragraph-3:hover {
     }
     p.about-paragraph-3 {
         font-size: 0.7em;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    p.about-paragraph {
-        font-size: 0.6em;
-        line-height: 1.2em;
-    }
-    p.about-paragraph-2 {
-        font-size: 0.9em;
-    }
-    p.about-paragraph-3 {
-        font-size: 0.6em;
     }
     div.list-item {
         font-size: 1.2em;
@@ -404,6 +393,27 @@ p.about-paragraph-3:hover {
     }
     p.about-paragraph-3 {
         font-size: 0.5em;
+    }
+}
+
+@media only screen and (max-width: 190px) {
+    .portfolio-image {
+        height: 60px;
+        width: 110px;
+    }
+    .portfolio-image:hover {
+        height: 50px;
+        width: 100px;
+    }
+    p.about-paragraph {
+        font-size: 0.5em;
+        line-height: 1em;
+    }
+    p.about-paragraph-2 {
+        font-size: 0.6em;
+    }
+    p.about-paragraph-3 {
+        font-size: 0.4em;
     }
 }
 
