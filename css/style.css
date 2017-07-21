@@ -180,9 +180,9 @@ p.about-paragraph-3:hover {
 }
 
 .portfolio-image {
-    height: 200px;
-    width: 310px;
-    margin: 10px;
+    height: 250px;
+    width: 350px;
+    margin: 20px;
     box-shadow: -1px -1px 2px white, 1px 1px 2px white, -6px 6px 8px black, 6px -6px 8px black;
     border-radius: 3%;
     z-index: 2;
@@ -315,6 +315,14 @@ p.about-paragraph-3:hover {
 }
 
 @media only screen and (max-width: 480px) {
+    .portfolio-image {
+        height: 140px;
+        width: 250px;
+    }
+    .portfolio-image:hover {
+        height: 130px;
+        width: 240px;
+    }
     p.about-paragraph {
         line-height: 1.4em;
         font-size: 0.7em;
@@ -337,14 +345,6 @@ p.about-paragraph-3:hover {
 }
 
 @media only screen and (max-width: 396px) {
-    .portfolio-image {
-        height: 140px;
-        width: 250px;
-    }
-    .portfolio-image:hover {
-        height: 130px;
-        width: 240px;
-    }
     .sectionTitle {
         font-size: 1.6em;
         width: 60%;
@@ -396,7 +396,7 @@ p.about-paragraph-3:hover {
     }
 }
 
-@media only screen and (max-width: 190px) {
+@media only screen and (max-width: 200px) {
     .portfolio-image {
         height: 60px;
         width: 110px;
