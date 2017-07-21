@@ -44,3 +44,5 @@ function rootAnimation() {
 $($list_item).on("click", rootAnimation);
 
 var $myphoto = $("#personal-foto");
+
+
