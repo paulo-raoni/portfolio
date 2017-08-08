@@ -1,421 +1,505 @@
 body {
-    background-color: black;
-    margin: 0;
+  background-color: black;
+  padding-top: 80px;
+  border: 1px solid black;
 }
 
+/* GENERAL SETTINGS STARTS HERE */
+
+/*Contains everything less navigation bar */
 .main-container {
-    position: relative;
-    text-align: center;
-    background-color: white;
-    margin: 0 15px 15px 15px;
-    padding: 0;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
-
-/*NAVIGATION BAR */
-
-.navigation {
-    position: fixed;
-    margin: auto;
-    background-color: black;
-    font-family: VT323;
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.2em;
-    height: 40px;
-    width: 100%;
-    z-index: 3;
-}
-
-.list-item {
-    background-color: black;
-    color: white;
-    font-size: 1.8em;
-    transition: all .30s;
-}
-
+/*Takes off every text-decoration from anchor tags  */
 a:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.navigation a:link {
-    text-decoration: none;
-    color: white;
-}
-
-div .list-item:hover {
-    background-color: #15224f;
-    transform: rotate(-2deg);
-    transform-origin: 80% 70%;
-}
-
-
-/* GENERAL SETTINGS */
-
+/*Styles sections 'About' and 'Portfolio' boxes */
 .sectionBox {
-    position: relative;
-    margin: 0 auto;
-    padding-bottom: 150px;
-    height: 600px;
-    color: white;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 150px;
+  height: 600px;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/*Styles sections 'About' and 'Portfolio' titles */
 .sectionTitle {
-    margin: 60px auto 30px auto;
-    background-color: #0b2247;
-    font-family: 'Shadows Into Light', cursive;
-    text-shadow: .1px .1px 2px lightgray, -.1px -.1px 2px lightblue;
-    text-align: center;
-    border-radius: 10%;
-    box-shadow: -4px 4px 10px black;
-    width: 60%;
-    transition: 1s all;
+  margin: 60px auto 30px auto;
+  background-color: #0b2247;
+  font-family: 'Shadows Into Light', cursive;
+  text-shadow: .1px .1px 2px lightgray, -.1px -.1px 2px lightblue;
+  text-align: center;
+  border-radius: 10%;
+  box-shadow: -4px 4px 10px black;
+  width: 60%;
+  transition: 1s all;
 }
 
+/*Section's title hover effect  */
 .sectionTitle:hover {
-    background-color: black;
-    width: 85%;
+  background-color: black;
+  width: 85%;
 }
 
+hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+/*GENERAL SETTINGS ENDS HERE */
 
-/*ABOUT SECTION */
+/*-------------------------------------------------*/
 
+/*NAVIGATION BAR STARTS HERE */
+.navigation {
+  background-color: rgba(0,0,0,.8);
+  font-family: VT323;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2em;
+  border-color: black;
+ }
+
+ul {
+  overflow: hidden;
+}
+
+/*Collapsable list items */
+.list-item {
+  color: white;
+  font-size: 1.8em;
+  transition: all .30s;
+}
+
+/*Collapsable list items hover effect  */
+.list-item:hover {
+  background-color: #15224f;
+  transform: rotate(-2deg);
+  transform-origin: 80% 70%;
+}
+
+/*Box containing the social networks items */
+.navigation-social {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+
+/*Images of social networks */
+.social-images {
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50%;
+  transition: all .50s;
+}
+
+/*Images of social networks hover effect*/
+.social-images:hover {
+  max-height: 55px;
+  max-width: 55px;
+  border-radius: 30%;
+  transform: rotateY(360deg);
+}
+
+/*Centralizes the hamburger button */
+.hamburger-button {
+  margin-left: 45%;
+  margin-right: 45%;
+}
+
+/*Used to toggle the navigation bar when scroll the window down.  */
+.nav-up {
+  top: -70px;
+}
+/*NAVIGATION BAR ENDS HERE */
+
+/*-------------------------------------------------*/
+
+/*ABOUT SECTION STARTS HERE */
 div#aboutBox {
-    background-image: url('https://media.licdn.com/media/AAEAAQAAAAAAAAntAAAAJDY2YmU0MmI4LThhNzYtNDU4Ny1iOTExLWI3YzRjNGQwZTVkNw.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    z-index: 1;
+  background-image: url('https://media.licdn.com/media/AAEAAQAAAAAAAAntAAAAJDY2YmU0MmI4LThhNzYtNDU4Ny1iOTExLWI3YzRjNGQwZTVkNw.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
 }
 
 p.about-paragraph {
-    margin: 10px auto;
-    font-family: Cousine, Arial;
-    font-weight: 600;
-    font-size: 1.2em;
-    font-style: italic;
-    text-align: left;
-    text-shadow: -.1px -.1px 3px lightsteelblue, .1px .1px 3px lightsteelblue, -3px -3px 1px black;
-    line-height: 2em;
-    width: 90%;
-    transition: all 1s;
+  margin: 10px auto;
+  font-family: Cousine, Arial;
+  font-weight: 600;
+  font-size: 1.2em;
+  font-style: italic;
+  text-align: left;
+  text-shadow: -.1px -.1px 3px lightsteelblue, .1px .1px 3px lightsteelblue, -3px -3px 1px black;
+  line-height: 2em;
+  width: 90%;
+  transition: all 1s;
 }
 
 p.about-paragraph:hover {
-    width: 89%;
-    background-color: #4770b2;
-    border-radius: 5%;
+  width: 89%;
+  background-color: #4770b2;
+  border-radius: 5%;
+
 }
 
 p.about-paragraph-2 {
-    margin: 8% auto 2% auto;
-    background-color: #0b2247;
-    font-family: Monoton, cursive;
-    font-size: 1.4em;
-    text-align: center;
-    text-shadow: -.8px .8px 2px white;
-    letter-spacing: 0.2em;
-    border-radius: 20%;
-    width: 50%;
-    transition: all 1s;
+  margin: 8% auto 2% auto;
+  background-color: #0b2247;
+  font-family: Monoton, cursive; 
+  font-size: 1.4em;
+  text-align: center;
+  text-shadow: -.8px .8px 2px white;
+  letter-spacing: 0.2em;
+  border-radius: 20%;
+  width: 50%;
+  transition: all 1s;
 }
 
 p.about-paragraph-2:hover {
-    width: 60%;
-    background-color: black;
-    border-radius: 5%;
-    transform: rotateX(20deg);
+  width: 60%;
+  background-color: black;
+  border-radius: 5%;
+  transform: rotateX(20deg);  
 }
 
 p.about-paragraph-3 {
-    margin: 0 auto;
-    font-family: VT323, Monospace;
-    font-size: 1.2em;
-    letter-spacing: 0.2em;
-    text-align: center;
-    text-shadow: -.1px -.1px 20px lightskyblue, .1px .1px 20px lightskyblue;
-    width: 90%;
-    transition: all 1s;
+  margin: 0 auto;
+  font-family: VT323, Monospace;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-shadow: -.1px -.1px 20px lightskyblue, .1px .1px 20px lightskyblue;
+  width: 90%;
+  transition: all 1s;
 }
 
 p.about-paragraph-3:hover {
-    width: 88%;
-    border-radius: 10%;
-    background-color: #4770b2;
+  width: 88%;
+  border-radius: 10%;
+  background-color: #4770b2;
 }
 
 #personal-foto {
-    margin: auto 30px auto;
-    border-radius: 50%;
-    width: 135px;
-    float: right;
-    transition: all 1.1s;
+  margin: auto 30px auto;
+  border-radius: 50%;
+  width: 135px;
+  float: right;
+  transition: all 1.1s;
 }
 
 #personal-foto:hover {
-    border-radius: 40%;
-    width: 110px;
-    opacity: 0.95;
+  border-radius: 40%;
+  width: 110px;
+  opacity: 0.95;
 }
+/*ABOUT SECTION ENDS HERE  */
 
+/*-------------------------------------------------*/
 
-/* PORTFOLIO SECTION */
-
+/* PORTFOLIO SECTION STARTS HERE */
 #portfolioBox {
-    position: relative;
-    background-image: url('https://media.licdn.com/media/AAEAAQAAAAAAAAntAAAAJDY2YmU0MmI4LThhNzYtNDU4Ny1iOTExLWI3YzRjNGQwZTVkNw.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    height: 80%;
+  position: relative;
+  background-image: url('https://media.licdn.com/media/AAEAAQAAAAAAAAntAAAAJDY2YmU0MmI4LThhNzYtNDU4Ny1iOTExLWI3YzRjNGQwZTVkNw.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  height: 80%;
 }
 
 .galery {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    transition: 1s all;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 1s all;
 }
 
 .portfolio-image {
-    height: 250px;
-    width: 350px;
-    margin: 20px;
-    box-shadow: -1px -1px 2px white, 1px 1px 2px white, -6px 6px 8px black, 6px -6px 8px black;
-    border-radius: 3%;
-    z-index: 2;
-    transition: 1s all;
+  height: 250px;
+  width: 350px;
+  margin: 20px;
+  box-shadow: -1px -1px 2px white, 1px 1px 2px white, -6px 6px 8px black, 6px -6px 8px black;
+  border-radius: 3%;
+  z-index: 2;
+  transition: 1s all;
+  
 }
 
 .portfolio-image:hover {
-    height: 190px;
-    width: 300px;
-    transform: rotateX(20deg) rotateZ(10deg);
+  height: 190px;
+  width: 300px;
+  transform: rotateX(20deg) rotateZ(10deg);  
 }
+/*PORTFOLIO SECTION ENDS HERE  */
 
+/*-------------------------------------------------*/
 
-/*FOOTER SECTION */
-
-.foot-container {
-    margin: auto;
-    font-family: Impact;
-    text-align: center;
-    background-color: black;
-    height: 250px;
-    color: white;
-    bottom: 0px;
+/*FOOTER SECTION START HERE */
+.footer {
+  margin: auto;
+  font-family: Impact;
+  text-align: center;
+  background-color: black;
+  height: 50px;
+  color: white;
+  margin-top: 100px;
+  bottom: 0px;
 }
 
 .foot-title {
-    transition: 1s all;
+  transition: 1s all;
 }
 
 .foot-title:hover {
-    transform: rotateZ(5deg);
+  transform: rotateZ(5deg);
 }
+/*FOOTER SECTION ENDS HERE */
 
-.first-foot,
-.second-foot {
-    margin-top: 50px;
-}
-
-.social-images {
-    max-width: 50px;
-    max-height: 50px;
-    border-radius: 50%;
-    margin: 10px;
-    transition: all .50s;
-}
-
-.social-images:hover {
-    max-height: 55px;
-    max-width: 55px;
-    border-radius: 30%;
-    transform: rotateY(360deg);
-}
-
+/*-------------------------------------------------*/
 
 /* QUERIES SECTION */
-
 @media only screen and (max-width: 952px) {
-    .social-images {
-        max-width: 40px;
-        max-height: 40px;
-    }
-    .social-images:hover {
-        max-height: 45px;
-        max-width: 45px;
-    }
+  .social-images {
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .social-images:hover {
+    max-height: 45px;
+    max-width: 45px;    
+  }
+
 }
 
 @media only screen and (max-width: 892px) {
-    p.about-paragraph {
-        font-size: 1.1em;
-    }
-    p.about-paragraph-2 {
-        font-size: 1.3em;
-    }
-    p.about-paragraph-3 {
-        font-size: 1.1em;
-    }
+  p.about-paragraph {
+    font-size: 1.1em;
+  }
+
+  p.about-paragraph-2 {
+    font-size: 1.3em;
+  }
+
+  p.about-paragraph-3 {
+    font-size: 1.1em;
+  }
+
 }
 
 @media only screen and (max-width: 823px) {
-    p.about-paragraph {
-        font-size: 1em;
-    }
-    p.about-paragraph-2 {
-        font-size: 1.2em;
-    }
-    p.about-paragraph-3 {
-        font-size: 1em;
-    }
-}
+  p.about-paragraph {
+    font-size: 1em;
+  }
+
+  p.about-paragraph-2 {
+    font-size: 1.2em;
+  }
+
+  p.about-paragraph-3 {
+    font-size: 1em;
+  }
+
+} 
+
+
 
 @media only screen and (max-width: 749px) {
-    .social-images {
-        max-width: 30px;
-        max-height: 30px;
-    }
-    .social-images:hover {
-        max-height: 35px;
-        max-width: 35px;
-    }
-    p.about-paragraph {
-        font-size: 0.9em;
-    }
-    p.about-paragraph-2 {
-        font-size: 1.2em;
-    }
-    p.about-paragraph-3 {
-        font-size: 0.9em;
-    }
+  .social-images {
+    max-width: 30px;
+    max-height: 30px;
+  }
+
+  .social-images:hover {
+    max-height: 35px;
+    max-width: 35px;    
+  }
+
+  p.about-paragraph {
+    font-size: 0.9em;
+  }
+
+  p.about-paragraph-2 {
+    font-size: 1.2em;
+  }
+
+  p.about-paragraph-3 {
+    font-size: 0.9em;
+  }
+
 }
 
 @media only screen and (max-width: 600px) {
-    .social-images {
-        max-width: 25px;
-        max-height: 25px;
-    }
-    .social-images:hover {
-        max-height: 30px;
-        max-width: 30px;
-    }
-    p.about-paragraph {
-        font-size: 0.8em;
-    }
-    p.about-paragraph-2 {
-        font-size: 1.1em;
-    }
-    p.about-paragraph-3 {
-        font-size: 0.8em;
-    }
+  .social-images {
+    max-width: 25px;
+    max-height: 25px;
+  }
+
+  .social-images:hover {
+    max-height: 30px;
+    max-width: 30px;
+  }
+
+   p.about-paragraph {
+    font-size: 0.8em;
+  }
+
+  p.about-paragraph-2 {
+    font-size: 1.1em;
+  }
+
+  p.about-paragraph-3 {
+    font-size: 0.8em;
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
-    .portfolio-image {
-        height: 140px;
-        width: 250px;
-    }
-    .portfolio-image:hover {
-        height: 130px;
-        width: 240px;
-    }
-    p.about-paragraph {
-        line-height: 1.4em;
-        font-size: 0.7em;
-    }
-    p.about-paragraph-2 {
-        font-size: 1em;
-    }
-    p.about-paragraph-3 {
-        font-size: 0.7em;
-    }
-    div.list-item {
-        font-size: 1.2em;
-    }
-    .foot-container h3 {
-        font-size: 1em;
-    }
-    .foot-container p {
-        font-size: 0.7em;
-    }
+  .portfolio-image {
+    height: 140px;
+    width: 250px;
+  }  
+  
+  .portfolio-image:hover {
+    height: 130px;
+    width: 240px;
+  }  
+  
+  
+  p.about-paragraph {
+    line-height: 1.4em;
+    font-size: 0.7em;
+  }
+
+  p.about-paragraph-2 {
+    font-size: 1em;
+  }
+
+  p.about-paragraph-3 {
+    font-size: 0.7em;
+  }
+
+  div.list-item {
+    font-size: 1.2em;
+  }
+
+  .foot-container h3 {
+    font-size: 1em;
+  }
+
+  .foot-container p {
+    font-size: 0.7em;
+  }
+
 }
 
 @media only screen and (max-width: 396px) {
-    .sectionTitle {
-        font-size: 1.6em;
-        width: 60%;
-    }
-    #personal-foto {
-        width: 100px;
-        float: none;
-    }
-    p.about-paragraph {
-        font-size: 0.6em;
-        line-height: 1em;
-    }
-    p.about-paragraph-2 {
-        margin-top: 20%;
-        font-size: 0.8em;
-    }
-    p.about-paragraph-3 {
-        font-size: 0.6em;
-    }
-    div.list-item {
-        font-size: 1.2em;
-    }
-    .foot-container h3 {
-        font-size: 1em;
-    }
-    .foot-container p {
-        font-size: 0.7em;
-    }
+  .sectionTitle {
+    font-size: 1.6em;
+    width: 60%;
+  }
+  
+  #personal-foto {
+    width: 100px;
+    float:none;
+  }
+  
+   p.about-paragraph {
+    font-size: 0.6em;
+    line-height:1em;
+  }
+
+  p.about-paragraph-2 {
+    margin-top: 20%;
+    font-size: 0.8em;
+  }
+
+  p.about-paragraph-3 {
+    font-size: 0.6em;
+  }
+
+  div.list-item {
+    font-size: 1.2em;
+  }
+
+  .foot-container h3 {
+    font-size: 1em;
+  }
+
+  .foot-container p {
+    font-size: 0.7em;
+  }
+
 }
 
-@media only screen and (max-width: 313px) {
-    .portfolio-image {
-        height: 80px;
-        width: 150px;
-    }
-    .portfolio-image:hover {
-        height: 70px;
-        width: 140px;
-    }
-    p.about-paragraph {
-        font-size: 0.6em;
-        line-height: 1.2em;
-    }
-    p.about-paragraph-2 {
-        font-size: 0.7em;
-    }
-    p.about-paragraph-3 {
-        font-size: 0.5em;
-    }
+@media only screen and (max-width: 313px){
+  .portfolio-image {
+    height: 80px;
+    width: 150px;
+  }
+  
+  .portfolio-image:hover {
+    height: 70px;
+    width: 140px;
+  } 
+  
+  p.about-paragraph {
+    font-size: 0.6em;
+    line-height:1.2em;
+  }
+
+  p.about-paragraph-2 {
+    font-size: 0.7em;
+  }
+
+  p.about-paragraph-3 {
+    font-size: 0.5em;
+  }
 }
 
-@media only screen and (max-width: 200px) {
-    .portfolio-image {
-        height: 60px;
-        width: 110px;
-    }
-    .portfolio-image:hover {
-        height: 50px;
-        width: 100px;
-    }
-    p.about-paragraph {
-        font-size: 0.5em;
-        line-height: 1em;
-    }
-    p.about-paragraph-2 {
-        font-size: 0.6em;
-    }
-    p.about-paragraph-3 {
-        font-size: 0.4em;
-    }
-}
+@media only screen and (max-width: 200px){
+  .portfolio-image {
+    height: 60px;
+    width: 110px;
+  }
+  
+  .portfolio-image:hover {
+    height: 50px;
+    width: 100px;
+  } 
+  
+  p.about-paragraph {
+    font-size: 0.5em;
+    line-height:1em;
+  }
 
+  p.about-paragraph-2 {
+    font-size: 0.6em;
+  }
+
+  p.about-paragraph-3 {
+    font-size: 0.4em;
+  }
+}
 
 }
