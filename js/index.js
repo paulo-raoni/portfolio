@@ -9,7 +9,7 @@ function translate() {
     $('.navigation-social h3').text('Redes Sociais');
 
     $('#aboutBox h1').text('Sobre Paulo Raoni');
-    $('#para1').text('Desenvolvedor Front-End (aprendendo) | Técnico em Programação de Jogos Digitais pela UNICARIOCA-RJ-Brasil e Atualmente cursando Análise e Desenvolvimento de Sistemas na mesma universidade | Estudante de TI em vários cursos na web, incluindo principalmente, o renomado ambiente de aprendizagem Free Code Camp.');
+    $('#para1').text('Desenvolvedor Front-End | Técnico em Programação de Jogos Digitais pela UNICARIOCA-RJ-Brasil e Atualmente cursando Análise e Desenvolvimento de Sistemas na mesma universidade | Estudante de TI em vários cursos na web, incluindo principalmente, o renomado ambiente de aprendizagem Free Code Camp.');
     $('#para2').text('<Caminho do Aprendizado/>');
 
     $('#portfolioBox h1').text('Portfólio');
